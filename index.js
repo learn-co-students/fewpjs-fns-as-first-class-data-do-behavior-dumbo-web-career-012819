@@ -7,7 +7,17 @@ function handleClick(e) {
   displayMessage(greet(timeString))
 }
 
-/* End Given Code, don't edit above here...*/
+ function greet(time){
+   time = parseInt(time.split(":")[0])
+   if (time < 12 ) {
+     return "Good Morning"
+   } else if (10 > time < 17) {
+     return "Good Afternoon"
+   } else if (time > 17) {
+     return "Good Evening"
+   }
+ }
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
+function displayMessage(massage){
+  alert(massage)
+}
